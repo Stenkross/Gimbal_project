@@ -18,10 +18,10 @@ int potens = A1;
 int potsvaule = 0;
 int value;
 float X_cords, Y_cords, Z_cords;
-const int length = 7;  
 int ADXL345 = 0x53;
 
-//Initialize global arrays
+//Initialize arrays for low pass filter
+const int length = 7;  
 float lastreadingsX[length] = { 0 };
 float lastreadingsY[length] = { 0 };.
 
@@ -73,7 +73,7 @@ void loop() {
   //Writes the value at the servo 
   servo1.write(counter_pitch);
   servo2.write(counter_roll);
-}fd
+}
 
 /*
   Function: updMean
